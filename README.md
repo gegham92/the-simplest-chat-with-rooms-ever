@@ -28,6 +28,7 @@ php yii migrate
 --- Наполнение таблицы user и room
 
 php yii user/create-all
+
 php yii root/create-all
 
 
@@ -44,5 +45,5 @@ https://314811.selcdn.ru/movie/upload/83674925_187009072671389_46044228636576317
 --- Проект на продакшене
 
 Переходите по ссылку.
-
+http://goginfo.ru/
 
