@@ -1,0 +1,44 @@
+<?php
+
+namespace common\models;
+
+/**
+ * This is the ActiveQuery class for [[Message]].
+ *
+ * @see Message
+ */
+class MessageQuery extends \yii\db\ActiveQuery
+{
+    /*public function active()
+    {
+        return $this->andWhere('[[status]]=1');
+    }*/
+
+    /**
+     * {@inheritdoc}
+     * @return Message[]|array
+     */
+    public function all($db = null)
+    {
+        return parent::all($db);
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return Message|array|null
+     */
+    public function one($db = null)
+    {
+        return parent::one($db);
+    }
+
+    public function getForCurrentRoom($room_id)
+    {
+        $messages = $this->where(['room_id' => $room_id])->orderBy(['created_at' => SORT_DESC])->all();
+
+        if ($messages === null)
+            return [];
+
+        return $messages;
+    }
+}
