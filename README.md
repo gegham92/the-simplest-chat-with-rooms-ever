@@ -2,6 +2,15 @@ The Simplest Chat With Rooms Ever :)
 
 Как запустить?
 
+--- Клонирование репозиторий
+
+git init
+git remote add origin https://github.com/gegham92/the-simplest-chat-with-rooms-ever.git
+composer install
+
+
+
+
 --- Окружение
 
 // Dev
